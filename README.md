@@ -4,7 +4,7 @@ This repository contains scripts to scrape [Hebban](https://www.hebban.nl) for D
 ## Install dependencies
 
 ### ChromeDriver
-I'm making using of [Selenium](https://www.seleniumhq.org) for automatic user actions such as clicks. This library requires a browser driver that provides the rendering backend. I've made use of [ChromeDriver](http://chromedriver.chromium.org/).
+I'm making using of [Selenium](https://www.seleniumhq.org) for automating user actions such as clicks. This library requires a browser driver that provides the rendering backend. I've made use of [ChromeDriver](http://chromedriver.chromium.org/).
 
 #### macOS
 If you're on macOS and you have Homebrew installed, you can install ChromeDriver by running:
@@ -15,7 +15,7 @@ If you're on macOS and you have Homebrew installed, you can install ChromeDriver
 You can download ChromeDriver from the official [download page](http://chromedriver.chromium.org/downloads).
 
 ### Python
-To install Python dependencies, run:     
+To install the Python dependencies, run:     
 
     pip install -r ./requirements.txt
 
