@@ -6,7 +6,7 @@ This dataset contains book reviews along with associated binary sentiment polari
 
 ## Download
 
-The dataset can be downloaded from here: http://bit.ly/2UTtbWh
+The dataset is ~74MB compressed and can be downloaded from here: [110k Dutch Book Reviews Dataset](http://bit.ly/2UTtbWh)
 
 
 ## Overview
