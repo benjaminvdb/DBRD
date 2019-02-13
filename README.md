@@ -13,6 +13,25 @@ The dataset is ~74MB compressed and can be downloaded from here:
 
 ## Overview
 
+### Directory structure
+
+The dataset includes three folders with data: `test` (test split), `train` (train split) and `unsup` (remaining reviews).
+Each review is assigned a unique identifier and can be deduced from the filename, as well as the rating: `[ID]_[RATING].txt`. *This is different from the Large Movie Review Dataset, where each file in a directory has a unique ID, but IDs are reused between folders.*
+
+The `urls.txt` file contains on line `L` the URL of the book review on Hebban for the book review with that ID, i.e., the URL of the book review in `48091_5.txt` can be found on line 48091 of `urls.txt`. It cannot be guaranteed that these pages still exist.
+
+````
+.
+├── test          // balanced 10% test split
+│   ├── neg
+│   └── pos:
+├── train:        // balanced 90% train split
+│   ├── neg
+│   └── pos
+└── unsup         // unbalanced positive and neutral
+└── urls.txt      // urls to reviews on Hebban
+````
+
 ### Size
 ````
   #all:           110000 (= #supervised + #unsupervised)
