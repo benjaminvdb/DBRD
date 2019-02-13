@@ -1,5 +1,39 @@
 # 110kDBRD: 110k Dutch Book Reviews Dataset
-This repository contains scripts to scrape [Hebban](https://www.hebban.nl) for Dutch book reviews that can be used for research purposes, e.g. sentiment analysis.
+
+This dataset contains book reviews along with associated binary sentiment polarity labels. It is greatly influenced by the [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) and intended as a benchmark for sentiment classification in Dutch. The scripts that were used to scrape the reviews from [Hebban](https://www.hebban.nl) can be found in the [110kDBRD GitHub repository](https://github.com/benjaminvdb/110kDBRD).
+
+# Dataset
+
+## Download
+
+The dataset can be downloaded from here: http://bit.ly/2UTtbWh
+
+
+## Overview
+
+### Size
+````
+  #all:           110000 (= #supervised + #unsupervised)
+  #supervised:     20928 (= #training + #testing)
+  #unsupervised:   89072
+  #training:       18836
+  #testing:         2092
+````
+
+### Labels
+
+Distribution of labels `positive/negative/neutral` in rounded percentages.
+````
+  training: 50/50/ 0
+  test:     50/50/ 0
+  unsup:    71/ 0/29
+````
+
+Train and test sets are balanced and contain no neutral reviews (for which `rating==3`).
+
+# Reproduce data
+
+Since scraping Hebban induces a load on their servers, it's best to download the prepared dataset instead. This also makes sure your results can be compared to those of others. The scripts and instructions should be used mostly as a starting point for building a scraper for another website.
 
 ## Install dependencies
 
@@ -50,6 +84,23 @@ Options:
   --encoding TEXT   Output file encoding.
   --indent INTEGER  Output JSON file with scraped data.
   --help            Show this message and exit.
+```
+
+### Post-process
+
+The third and final step is to prepare the dataset using the scraped reviews. By default, we limit the number of reviews to 110k, filter out some reviews and prepare train and test sets of 0.9 and 0.1 the total amount, respectively.
+
+```
+Usage: post_process.py [OPTIONS] INFILE OUTDIR
+
+Options:
+  --encoding TEXT              Input file encoding
+  --keep-incorrect-date TEXT   Whether to keep reviews with invalid dates.
+  --sort TEXT                  Whether to sort reviews by date.
+  --maximum INTEGER            Maximum number of reviews in output
+  --valid-size-fraction FLOAT  Fraction of total to set aside as validation.
+  --shuffle TEXT               Shuffle data before saving.
+  --help                       Show this message and exit.
 ```
 
 ## License

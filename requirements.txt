@@ -4,3 +4,4 @@ beautifulsoup4==4.7.1
 selenium==3.141.0
 progressbar2==3.39.2
 lxml==4.3.0
+pandas==0.24.1

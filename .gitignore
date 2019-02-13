@@ -104,3 +104,8 @@ venv.bak/
 .mypy_cache/
 
 .idea/
+
+*.tgz
+*.json
+*.txt
+110kDBRD/
