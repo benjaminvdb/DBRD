@@ -107,7 +107,7 @@ Options:
 
 ## Acknowledgements
 
-This dataset was created for testing out the [ULMFiT](https://arxiv.org/abs/1801.06146) (by Jeremy Howard and Sebastian Ruder) deep learning algorithm for text classification. It is implemented in the [FastAI](https://github.com/fastai/fastai) Python library that has taught me a lot. I'd also like to thank for making [10kGNAD](https://github.com/tblock/10kGNAD) his dataset publicly available and giving me a starting point for this dataset. The dataset structure based on the [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) by Andrew L. Maas et al.
+This dataset was created for testing out the [ULMFiT](https://arxiv.org/abs/1801.06146) (by Jeremy Howard and Sebastian Ruder) deep learning algorithm for text classification. It is implemented in the [FastAI](https://github.com/fastai/fastai) Python library that has taught me a lot. I'd also like to thank [Timo Block](https://github.com/tblock) for making [10kGNAD](https://github.com/tblock/10kGNAD) his dataset publicly available and giving me a starting point for this dataset. The dataset structure based on the [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) by Andrew L. Maas et al.
 
 ## License
 
