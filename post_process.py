@@ -3,10 +3,9 @@
 import codecs
 import json
 import os
-import random
 
 import click
-import pandas as pd
+import sklearn
 from progressbar import ProgressBar
 
 
@@ -21,8 +20,8 @@ def load(infile, keep_incorrect_date=False, unique=True, sort=True, maximum=1100
             reviews = filter(lambda x: x is not None and x['published'] >= '2002-09-11T00:00:00+02:00', reviews)
 
         if unique:
-            # Define a unique review as one with a unique combination of field values
-            u = {u''.join(unicode(value) for value in review.itervalues()): review for review in reviews}
+            # Define a unique review as one with a unique review text
+            u = {review['text']: review for review in reviews}
             reviews = u.values()
 
         if sort:
@@ -110,7 +109,7 @@ def process(infile, outdir, encoding, keep_incorrect_date, sort, maximum, valid_
     reviews = load(infile, keep_incorrect_date, sort, encoding, maximum)
 
     if shuffle:
-        random.shuffle(reviews, int)  # Will call int (=0) as seed for reproducibility
+        sklearn.utils.shuffle(reviews)
 
     pos = filter(lambda x: x['rating'] > 3, reviews)
     neg = filter(lambda x: x['rating'] < 3, reviews)
