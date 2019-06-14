@@ -11,7 +11,7 @@ The dataset is ~74MB compressed and can be downloaded from here:
 **[110k Dutch Book Reviews Dataset](http://bit.ly/2UTtbWh)**
 
 
-A language model trained with [FastAI](https://github.com/fastai/fastai) on Dutcg Wikipedia can be downloaded from here:
+A language model trained with [FastAI](https://github.com/fastai/fastai) on Dutch Wikipedia can be downloaded from here:
 
 **[Dutch language model trained on Wikipedia](http://bit.ly/2trOhzq)**
 
