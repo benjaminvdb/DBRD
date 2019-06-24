@@ -72,12 +72,12 @@ def scrape(infile, outfile, encoding, indent):
                     })
         except Exception:
             errors.append(url)
-            print("Error {}: {}".format(len(errors), url))
+            print("Error {len(errors)}: {url}")
             continue
 
-    print("Finished scraping {} urls with {} errors.".format(len(urls), len(errors)))
+    print(f"Finished scraping {len(urls)} urls with {len(errors)}")
 
-    print("Writing reviews to {}".format(outfile))
+    print(f"Writing reviews to {outfile}")
     with codecs.open(outfile, 'w', encoding=encoding) as f:
         json.dump(reviews, f, ensure_ascii=False, indent=indent)
 

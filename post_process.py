@@ -17,12 +17,12 @@ def load(infile, keep_incorrect_date=False, unique=True, sort=True):
         reviews = json.load(f)
 
         if not keep_incorrect_date:
-            reviews = filter(lambda x: x is not None and x['published'] >= '2002-09-11T00:00:00+02:00', reviews)
+            reviews = [x for x in reviews if x is not None and x['published'] >= '2002-09-11T00:00:00+02:00']
 
         if unique:
             # Define a unique review as one with a unique review text
             u = {review['text']: review for review in reviews}
-            reviews = u.values()
+            reviews = list(u.values())
 
         if sort:
             reviews = sorted(reviews, key=lambda x: x['published'])
@@ -107,9 +107,9 @@ def process(infile, outdir, encoding, keep_incorrect_date, sort, valid_size_frac
     if shuffle:
         reviews = sklearn.utils.shuffle(reviews)
 
-    pos = filter(lambda x: x['rating'] > 3, reviews)
-    neg = filter(lambda x: x['rating'] < 3, reviews)
-    neut = filter(lambda x: x['rating'] == 3, reviews)  # set aside for model fine-tuning
+    pos = [x for x in reviews if x['rating'] > 3]
+    neg = [x for x in reviews if x['rating'] < 3]
+    neut = [x for x in reviews if x['rating'] == 3]  # set aside for model fine-tuning
 
     # Balance dataset
     train_size = min(len(pos), len(neg))
@@ -124,11 +124,11 @@ def process(infile, outdir, encoding, keep_incorrect_date, sort, valid_size_frac
     test = sup[:end]
     train = sup[end:]
 
-    print("Size all data:\t{}".format(len(reviews)))
-    print("Size supervised:\t{}".format(len(sup)))
-    print("Size unsupervised:\t{}".format(len(unsup)))
-    print("Size training:\t{}".format(len(train)))
-    print("Size testing:\t{}".format(len(test)))
+    print(f"Size all data:\t{len(reviews)}")
+    print(f"Size supervised:\t{len(sup)}")
+    print(f"Size unsupervised:\t{len(unsup)}")
+    print(f"Size training:\t{len(train)}")
+    print(f"Size testing:\t{len(test)}")
 
     os.mkdir(outdir)
 

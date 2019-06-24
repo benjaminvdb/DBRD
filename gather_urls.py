@@ -27,7 +27,7 @@ def gather(outfile, offset, step):
 
         soup = BeautifulSoup(data['html'], 'lxml')
         new_urls = [div['data-url'] for div in soup('div', {'class': 'item'})]
-        print("Fetched {} urls from {}".format(len(new_urls), target_url))
+        print(f"Fetched {len(new_urls)} urls from {len(target_url)}")
         urls.extend(new_urls)
         offset += 1000
 
