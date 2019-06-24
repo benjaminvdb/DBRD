@@ -39,11 +39,11 @@ The `urls.txt` file contains on line `L` the URL of the book review on Hebban fo
 
 ### Size
 ````
-  #all:           110000 (= #supervised + #unsupervised)
-  #supervised:     20928 (= #training + #testing)
-  #unsupervised:   89072
-  #training:       18836
-  #testing:         2092
+  #all:           118516 (= #supervised + #unsupervised)
+  #supervised:     22252 (= #training + #testing)
+  #unsupervised:   96264
+  #training:       20028
+  #testing:         2224
 ````
 
 ### Labels
