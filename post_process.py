@@ -9,7 +9,7 @@ import sklearn
 from progressbar import ProgressBar
 
 
-def load(infile, keep_incorrect_date=False, unique=True, sort=True, maximum=110000):
+def load(infile, keep_incorrect_date=False, unique=True, sort=True):
     """
     Load reviews from JSON input file.
     """
@@ -26,9 +26,6 @@ def load(infile, keep_incorrect_date=False, unique=True, sort=True, maximum=1100
 
         if sort:
             reviews = sorted(reviews, key=lambda x: x['published'])
-
-        if maximum:
-            reviews = reviews[:maximum]
 
     return reviews
 
@@ -102,14 +99,13 @@ def write_urls(reviews, outfile):
 @click.option('--encoding', default='utf-8', help='Input file encoding')
 @click.option('--keep-incorrect-date', default=False, help='Whether to keep reviews with invalid dates.')
 @click.option('--sort', default=True, help='Whether to sort reviews by date.')
-@click.option('--maximum', default=110000, help='Maximum number of reviews in output')
 @click.option('--valid-size-fraction', default=0.1, help='Fraction of total to set aside as validation.')
 @click.option('--shuffle', default=True, help='Shuffle data before saving.')
-def process(infile, outdir, encoding, keep_incorrect_date, sort, maximum, valid_size_fraction, shuffle):
-    reviews = load(infile, keep_incorrect_date, sort, encoding, maximum)
+def process(infile, outdir, encoding, keep_incorrect_date, sort, valid_size_fraction, shuffle):
+    reviews = load(infile, keep_incorrect_date, sort, encoding)
 
     if shuffle:
-        sklearn.utils.shuffle(reviews)
+        reviews = sklearn.utils.shuffle(reviews)
 
     pos = filter(lambda x: x['rating'] > 3, reviews)
     neg = filter(lambda x: x['rating'] < 3, reviews)
