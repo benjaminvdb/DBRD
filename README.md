@@ -8,7 +8,7 @@ This dataset contains book reviews along with associated binary sentiment polari
 
 The dataset is ~74MB compressed and can be downloaded from here:
 
-**[110k Dutch Book Reviews Dataset](http://bit.ly/2UTtbWh)**
+**[110k Dutch Book Reviews Dataset](https://github.com/benjaminvdb/110kDBRD/releases/download/v2.0/110kDBRD_v2.tgz)**
 
 
 A language model trained with [FastAI](https://github.com/fastai/fastai) on Dutch Wikipedia can be downloaded from here:
@@ -27,6 +27,7 @@ The `urls.txt` file contains on line `L` the URL of the book review on Hebban fo
 
 ````
 .
+├── README.md     // the file you're reading
 ├── test          // balanced 10% test split
 │   ├── neg
 │   └── pos:
@@ -52,7 +53,7 @@ Distribution of labels `positive/negative/neutral` in rounded percentages.
 ````
   training: 50/50/ 0
   test:     50/50/ 0
-  unsup:    71/ 0/29
+  unsup:    72/ 0/28
 ````
 
 Train and test sets are balanced and contain no neutral reviews (for which `rating==3`).
@@ -77,7 +78,7 @@ You can download ChromeDriver from the official [download page](http://chromedri
 ### Python
 The scripts are written for **Python 3**=. To install the Python dependencies, run:     
 
-    pip install -r ./requirements.txt
+    pip3 install -r ./requirements.txt
 
 
 ## Run
@@ -129,9 +130,16 @@ Options:
   --help                       Show this message and exit.
 ```
 
+## Changelog
+
+v2: Removed advertisements from reviews and increased dataset size to 118,516.
+v1: Initial release
+
 ## Acknowledgements
 
-This dataset was created for testing out the [ULMFiT](https://arxiv.org/abs/1801.06146) (by Jeremy Howard and Sebastian Ruder) deep learning algorithm for text classification. It is implemented in the [FastAI](https://github.com/fastai/fastai) Python library that has taught me a lot. I'd also like to thank [Timo Block](https://github.com/tblock) for making his [10kGNAD](https://github.com/tblock/10kGNAD) dataset publicly available and giving me a starting point for this dataset. The dataset structure based on the [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) by Andrew L. Maas et al.
+This dataset was created for testing out the [ULMFiT](https://arxiv.org/abs/1801.06146) (by Jeremy Howard and Sebastian Ruder) deep learning algorithm for text classification. It is implemented in the [FastAI](https://github.com/fastai/fastai) Python library that has taught me a lot. I'd also like to thank [Timo Block](https://github.com/tblock) for making his [10kGNAD](https://github.com/tblock/10kGNAD) dataset publicly available and giving me a starting point for this dataset. The dataset structure based on the [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) by Andrew L. Maas et al. Thanks to [Andreas van Cranenburg](https://github.com/andreasvc) for pointing out a problem with the dataset.
+
+And of course I'd like to thank all the reviewers on [Hebban](https://www.hebban.nl) for having taken the time to write all these reviews. You've made both book enthousiast and NLP researchers very happy :)
 
 ## License
 
