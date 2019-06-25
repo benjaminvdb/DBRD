@@ -133,6 +133,7 @@ Options:
 ## Changelog
 
 v2: Removed advertisements from reviews and increased dataset size to 118,516.
+
 v1: Initial release
 
 ## Acknowledgements
