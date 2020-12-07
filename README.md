@@ -6,9 +6,9 @@ The DBRD (pronounced *dee-bird*) dataset contains over 110k book reviews along w
 
 ## Downloads
 
-The dataset is ~74MB compressed and can be downloaded from here:
+The dataset is ~85MB compressed and can be downloaded from here:
 
-**[Dutch Book Reviews Dataset](https://github.com/benjaminvdb/DBRD/releases/download/v2.0/DBRD_v2.tgz)**
+**[Dutch Book Reviews Dataset](https://github.com/benjaminvdb/DBRD/releases/download/v3.0/DBRD_v3.tgz)**
 
 
 A language model trained with [FastAI](https://github.com/fastai/fastai) on Dutch Wikipedia can be downloaded from here:
@@ -131,6 +131,8 @@ Options:
 ```
 
 ## Changelog
+
+v3: Changed name of the dataset from 110kDBRD to DBRD. The dataset itself remains unchanged.
 
 v2: Removed advertisements from reviews and increased dataset size to 118,516.
 
