@@ -136,6 +136,28 @@ v2: Removed advertisements from reviews and increased dataset size to 118,516.
 
 v1: Initial release
 
+## Citation
+
+Please use the following citation when making use of this dataset in your work.
+
+```
+@article{DBLP:journals/corr/abs-1910-00896,
+  author    = {Benjamin van der Burgh and
+               Suzan Verberne},
+  title     = {The merits of Universal Language Model Fine-tuning for Small Datasets
+               - a case with Dutch book reviews},
+  journal   = {CoRR},
+  volume    = {abs/1910.00896},
+  year      = {2019},
+  url       = {http://arxiv.org/abs/1910.00896},
+  archivePrefix = {arXiv},
+  eprint    = {1910.00896},
+  timestamp = {Fri, 04 Oct 2019 12:28:06 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1910-00896.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+```
+
 ## Acknowledgements
 
 This dataset was created for testing out the [ULMFiT](https://arxiv.org/abs/1801.06146) (by Jeremy Howard and Sebastian Ruder) deep learning algorithm for text classification. It is implemented in the [FastAI](https://github.com/fastai/fastai) Python library that has taught me a lot. I'd also like to thank [Timo Block](https://github.com/tblock) for making his [10kGNAD](https://github.com/tblock/10kGNAD) dataset publicly available and giving me a starting point for this dataset. The dataset structure based on the [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) by Andrew L. Maas et al. Thanks to [Andreas van Cranenburg](https://github.com/andreasvc) for pointing out a problem with the dataset.
