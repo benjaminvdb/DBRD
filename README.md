@@ -1,6 +1,6 @@
-# 110kDBRD: 110k Dutch Book Reviews Dataset
+# DBRD: Dutch Book Reviews Dataset
 
-This dataset contains book reviews along with associated binary sentiment polarity labels. It is greatly influenced by the [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) and intended as a benchmark for sentiment classification in Dutch. The scripts that were used to scrape the reviews from [Hebban](https://www.hebban.nl) can be found in the [110kDBRD GitHub repository](https://github.com/benjaminvdb/110kDBRD).
+This dataset contains over 110k book reviews along with associated binary sentiment polarity labels. It is greatly influenced by the [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) and intended as a benchmark for sentiment classification in Dutch. The scripts that were used to scrape the reviews from [Hebban](https://www.hebban.nl) can be found in the [DBRD GitHub repository](https://github.com/benjaminvdb/DBRD).
 
 # Dataset
 
@@ -8,7 +8,7 @@ This dataset contains book reviews along with associated binary sentiment polari
 
 The dataset is ~74MB compressed and can be downloaded from here:
 
-**[110k Dutch Book Reviews Dataset](https://github.com/benjaminvdb/110kDBRD/releases/download/v2.0/110kDBRD_v2.tgz)**
+**[Dutch Book Reviews Dataset](https://github.com/benjaminvdb/110kDBRD/releases/download/v2.0/DBRD_v2.tgz)**
 
 
 A language model trained with [FastAI](https://github.com/fastai/fastai) on Dutch Wikipedia can be downloaded from here:
