@@ -76,7 +76,7 @@ If you're on macOS and you have Homebrew installed, you can install ChromeDriver
 You can download ChromeDriver from the official [download page](http://chromedriver.chromium.org/downloads).
 
 ### Python
-The scripts are written for **Python 3**=. To install the Python dependencies, run:     
+The scripts are written for **Python 3**. To install the Python dependencies, run:     
 
     pip3 install -r ./requirements.txt
 
