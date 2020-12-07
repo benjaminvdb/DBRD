@@ -8,7 +8,7 @@ This dataset contains over 110k book reviews along with associated binary sentim
 
 The dataset is ~74MB compressed and can be downloaded from here:
 
-**[Dutch Book Reviews Dataset](https://github.com/benjaminvdb/110kDBRD/releases/download/v2.0/DBRD_v2.tgz)**
+**[Dutch Book Reviews Dataset](https://github.com/benjaminvdb/DBRD/releases/download/v2.0/DBRD_v2.tgz)**
 
 
 A language model trained with [FastAI](https://github.com/fastai/fastai) on Dutch Wikipedia can be downloaded from here:
