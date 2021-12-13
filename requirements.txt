@@ -3,6 +3,6 @@ requests==2.21.0
 beautifulsoup4==4.7.1
 selenium==3.141.0
 progressbar2==3.39.2
-lxml==4.6.3
+lxml==4.6.5
 pandas==0.24.1
 scikit-learn==0.20.2
