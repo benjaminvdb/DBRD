@@ -1,5 +1,7 @@
 # DBRD: Dutch Book Reviews Dataset
 
+![GitHub release (with filter)](https://img.shields.io/github/v/release/benjaminvdb/DBRD) ![GitHub](https://img.shields.io/github/license/benjaminvdb/DBRD) ![GitHub all releases](https://img.shields.io/github/downloads/benjaminvdb/DBRD/total) ![GitHub Sponsors](https://img.shields.io/github/sponsors/benjaminvdb)
+
 The DBRD (pronounced *dee-bird*) dataset contains over 110k book reviews along with associated binary sentiment polarity labels. It is greatly influenced by the [Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/) and intended as a benchmark for sentiment classification in Dutch. The scripts that were used to scrape the reviews from [Hebban](https://www.hebban.nl) can be found in the [DBRD GitHub repository](https://github.com/benjaminvdb/DBRD).
 
 # Dataset
