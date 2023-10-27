@@ -1,5 +1,5 @@
 Click==7.0
-requests==2.21.0
+requests==2.31.0
 beautifulsoup4==4.7.1
 selenium==3.141.0
 progressbar2==3.39.2
